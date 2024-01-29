@@ -1,16 +1,7 @@
-from setuptools import setup, find_packages
-from typing import List
+from src.logger.logging import logging
 
-HYPEN_E_DOT='-e .'
+logging.info("this is myb testing")
 
-def get_requiremet(file_path:str)->List[str]:
-    requirements = []
-    with open(file_path) as f:
-        requirements=f.readlines()
-        requirements=[req.replace("\n","")for req in requirements]
-        
-        if HYPEN_E_DOT in requirements:
-            requirements.remove(HYPEN_E_DOT)
-    return requirements
 
-print(get_requiremet("./requirements.txt"))
+logging.info(" this my second tesgting")
+logging.info(" this my second tesgting")
